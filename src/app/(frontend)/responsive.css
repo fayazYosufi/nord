@@ -1,0 +1,108 @@
+
+@media (min-width : 420px ){
+}
+@media (max-width: 768px){
+
+    .tb_container{width: 98%; margin: 0 auto;}
+    .myContainer{width: 90%; margin: 0 auto;}
+
+    .tb_dFlex{display: flex !important;}
+    .tb_dGrid{display: grid !important;}
+    .tb_gap1{gap: 1rem !important;}
+    
+    .tb_w100{width: 100% !important;}
+    .tb_w80{width: 80% !important;}
+    .col3{width: 48%;}
+    .cardH{min-width: 170px;}
+    .cardW{min-width: 270px;}
+
+    .tb_gp1{gap: 1rem;}
+
+    .fsHuge, .titleLarge{font-size: 2.25rem !important;}
+    .fsMd{font-size: 1.25rem !important;}
+
+
+}
+
+@media (max-width : 480px ){
+
+    #mobileMenu{display: inline;}
+    
+    .mb_dNone{display: none !important;}
+    .mb_show{display: inline-block !important;}
+    .mb_dFlex{display: flex !important;}
+    .mb_flexCol{flex-direction: column !important;}
+    .mb_flexColRev{flex-direction: column-reverse !important;}
+
+    .mb_wFill{width: -webkit-fill-available !important;}
+    .mb_w30{width: 30% !important;}
+    .mb_w70{width: 70% !important;}
+    .mb_flexWrapNo{flex-wrap: nowrap;}
+    .mb_jcc{justify-content: center !important;}
+    .mb_aliFe{align-items: flex-end !important;}
+    .mb_tac{text-align: center !important;}
+    .mb_gap1{gap: 1rem;}
+    .mb_gap2{gap: 2rem;}
+
+    .section{
+        /* padding: 4% 4%; */
+        padding: 3rem 1rem;
+    }
+    .myContainer{
+        width: 100%;
+        margin: 0 !important;
+    }
+    .w20, .w30, .w40, .w50, .w60, .w70, .w80, .col, .col2, .col3, .col4 {
+        width: 100% ;
+    }
+
+
+    .m4, .m2{margin: 1rem !important;}
+    .p4, .p2, .p6, .ptb2, .ptb4, .ptb6, .pside4{padding: 1rem !important;}
+    .mb_p1{padding: 1rem !important;}
+    .mb_p2{padding: 2rem !important;}
+
+    
+    .gap4, .gap3, .gap2{gap: 1rem;}
+    .fsLarge{font-size: 2rem !important;}
+    .fsHuge{font-size: xx-large !important;}
+    .fsMd{font-size: 1.125rem !important;}
+    .mb_ovflS{overflow: scroll;}
+    .mb_bgTrans{background-color: transparent !important;}
+    .mb_cWhite, .mb_cWhite *{color: white !important;}
+    .mb_posAbsolute{position: absolute;}
+
+    .title{font-size: 1.5rem !important;}
+    .titleLarge{font-size: 2.25rem ;}
+
+    .cardH, .cardW{min-width: 350px;}
+
+    #menus{
+        position: fixed;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: flex-start !important;
+        /* top: -100%; */
+        top: 70px;
+        /* left: 0; Hide menu off-screen */
+        right: -100%; /* Hide menu off-screen */
+        width: 100vw;
+        height: 100%;
+        /* background-color: white; */
+        color: white;
+        text-align: right;
+        padding: 1rem;
+        font-size: 1rem;
+        /* transition: top 0.5s ease; Smooth transition */
+        transition: right 0.5s ease; /* Smooth transition */
+    }
+    .open {
+        /* top: 75px !important ; Slide in */
+        right: 0 !important ; /* Slide in */
+        /* top: 200px; */
+    }
+    .formMessage label {
+        color: white !important;
+    }
+
+}
