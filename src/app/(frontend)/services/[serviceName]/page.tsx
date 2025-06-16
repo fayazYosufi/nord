@@ -7,11 +7,13 @@ import Consult from '@/app/(frontend)/components/consult'
 import DeviderLine from '@/app/(frontend)/components/miniComponents/DeviderLine'
 import { usePathname } from 'next/navigation'
 import { SectionDetails } from '../../components/sectionDetails'
+import Image from 'next/image'
+
 // export default async function PostDetials({params, }: {params: Promise<{serviceName: string}> }) {
-export default function PostDetials({ params }: { params: Promise<{ serviceName: string }> }) {
+export default function PostDetials() {
   // const serviceName = (await params).serviceName
 
-  const { singlePostData, theme, isMobile, isTablet, myServices } = useMyContext()
+  const { theme, isMobile, isTablet, myServices } = useMyContext()
 
   const WhyUs = () => {
     const whyUs = [
@@ -44,7 +46,7 @@ export default function PostDetials({ params }: { params: Promise<{ serviceName:
             // style={{ color: theme.colorMain }}
           >
             <div className="icon ">
-              <img src={item.logo} alt="" />
+              <Image src={item.logo} alt="" />
             </div>
             <div className={`${(isMobile || isTablet) && 'w70'}`}>
               <div className="fsMd lineH2">{item.title}</div>
@@ -93,7 +95,7 @@ export default function PostDetials({ params }: { params: Promise<{ serviceName:
             className={`${isMobile && 'bgWhite reduce7 shadowSm p1 alic taC'} w50 dFlex flexCol gap1`}
           >
             <div className="circle p1 icon" style={{ backgroundColor: theme.colorPrimary }}>
-              <img src={service.logo} alt="" />
+              <Image src={service.logo} alt="" />
             </div>
             <div>
               <div className="fsMd lineH2">{service.title}</div>
@@ -112,7 +114,7 @@ export default function PostDetials({ params }: { params: Promise<{ serviceName:
 
     return (
       <div>
-        <img className="reduce15" src={director_section?.ImgUrl?.url} alt="" />
+        <Image className="reduce15" src={director_section?.ImgUrl?.url} alt="" />
       </div>
     )
   }

@@ -1,5 +1,6 @@
 'use client'
 import { useMyContext } from '@/app/(frontend)/theContext'
+import Image from 'next/image'
 
 const Consult = () => {
   const { isMobile, isTablet, sections } = useMyContext()
@@ -25,7 +26,7 @@ const Consult = () => {
           className={`overflowH reduce-5 ${isMobile || isTablet ? 'wFill' : 'w30'}`}
           style={{ height: '350px' }}
         >
-          <img
+          <Image
             src={consultSectioni?.ImgUrl?.url}
             className="reduce-15 objCover"
             alt=""

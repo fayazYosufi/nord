@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const OurCustomers = () => {
-  const { theme, sections } = useMyContext()
+  const { sections } = useMyContext()
   const customerSection = sections[sections.findIndex((customer) => customer.Name == 'customers')]
   const TitleAndDetails: string[] = customerSection?.LongDetails.split('#')
 
@@ -79,7 +79,6 @@ const RangeOfService = () => {
                 className="card cardH  zIndex_-1  reduce7"
                 // style={{backgroundImage:`url(${service.srvImgURL})`, backgroundPosition:'center', width: service.imgXwidth=='2' ? isTablet ? '40%' :'48%': '23%', }}
               >
-                {/* <img className='' src={service.srvImgURL}  alt="" style={{height:'100%'}} /> */}
                 <div
                   // href={`/services/${service.serviceName.replace(/\s+/g, '_')}`}
                   className="bgGradiant fsMd bold"
@@ -102,7 +101,7 @@ const RangeOfService = () => {
   )
 }
 const CurrentJobOffers = () => {
-  const { theme, jobOffers } = useMyContext()
+  const { jobOffers } = useMyContext()
 
   return (
     <div className="section">
@@ -156,7 +155,7 @@ const Message = () => {
           <div className="fsLarge">contact</div>
         </div>
         <p>
-          Feel free to send us a few sentences or key points about your concern, and we'll get back
+          Feel free to send us a few sentences or key points about your concern, and well get back
           to you as soon as possible. Alternatively, you can schedule a phone appointment directly
           or simply give us a call.
         </p>

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { useMyContext } from '../theContext'
+import Image from 'next/image'
 
 interface ComponentProps {
   classes?: string
@@ -53,7 +54,7 @@ const Component30_70: React.FC<ComponentProps> = ({
             }}
           >
             {imgSrc ? (
-              <img src={imgSrc.url} className="imgCenter wFill h100 reduce-15" />
+              <Image src={imgSrc.url} className="imgCenter wFill h100 reduce-15" />
             ) : (
               lefText || LeftComponent
             )}

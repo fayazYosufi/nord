@@ -1,9 +1,9 @@
 import { useMyContext } from '../theContext'
-import DeviderLine from './miniComponents/DeviderLine'
+// import DeviderLine from './miniComponents/DeviderLine'
 
 export const SectionDetails: React.FC<{ [key: string]: string }> = ({
   classes,
-  array,
+  // array,
   sectionName,
 }) => {
   const { theme, myServices } = useMyContext()
