@@ -6,7 +6,7 @@ import Consult from '../components/consult'
 import SortFilterSearch from '../components/miniComponents/SortFilterSearch'
 import { ServicePropsTypes } from '../../../types'
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 const Services = () => {
   const { myServices, singlePostData, loading, error } = useMyContext()
@@ -18,7 +18,7 @@ const Services = () => {
     return (
       <div className="card dFlex flexCol bgWhite p1 reduce-15 col3" style={{ minHeight: '450px' }}>
         <div>
-          <Image src={ImgURL.url} alt="" height={250} className="reduce-15" />
+          <img src={ImgURL.url} alt="" height={250} className="reduce-15" />
         </div>
         <div className="title">{Name}</div>
         <div className="dFlex jcsb mtAuto alic">
