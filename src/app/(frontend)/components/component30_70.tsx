@@ -54,7 +54,7 @@ const Component30_70: React.FC<ComponentProps> = ({
             }}
           >
             {imgSrc ? (
-              <Image src={imgSrc.url} className="imgCenter wFill h100 reduce-15" />
+              <Image src={imgSrc.url} alt="img" className="imgCenter wFill h100 reduce-15" />
             ) : (
               lefText || LeftComponent
             )}
