@@ -41,7 +41,7 @@ export const Services: CollectionConfig = {
       type: 'upload',
       relationTo: 'media',
       required: true,
-      defaultValue: '/api/media/file/contact.PNG',
+      // defaultValue: '/api/media/file/contact.PNG',
     },
     {
       name: 'ImgWidthSizeX',

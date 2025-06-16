@@ -6,7 +6,7 @@ import './style.css'
 import './contents.css'
 import './responsive.css'
 import './form.css'
-import '@fortawesome/fontawesome-free/css/all.min.css'
+// import '@fortawesome/fontawesome-free/css/all.min.css'
 
 // Import the context provider
 import { MyProvider } from './theContext' // Ensure the path is correct

@@ -69,8 +69,8 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    services: Service;
     sections: Section;
+    services: Service;
     jobOffers: JobOffer;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,15 +80,15 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    services: ServicesSelect<false> | ServicesSelect<true>;
     sections: SectionsSelect<false> | SectionsSelect<true>;
+    services: ServicesSelect<false> | ServicesSelect<true>;
     jobOffers: JobOffersSelect<false> | JobOffersSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
   };
   db: {
-    defaultIDType: number;
+    defaultIDType: string;
   };
   globals: {};
   globalsSelect: {};
@@ -124,7 +124,7 @@ export interface UserAuthOperations {
  * via the `definition` "users".
  */
 export interface User {
-  id: number;
+  id: string;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -141,7 +141,7 @@ export interface User {
  * via the `definition` "media".
  */
 export interface Media {
-  id: number;
+  id: string;
   alt: string;
   updatedAt: string;
   createdAt: string;
@@ -157,15 +157,30 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sections".
+ */
+export interface Section {
+  id: string;
+  Name: string;
+  Title?: string | null;
+  ShortDetails: string;
+  LongDetails?: string | null;
+  ImgUrl?: (string | null) | Media;
+  ButtonText?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "services".
  */
 export interface Service {
-  id: number;
+  id: string;
   Sort?: number | null;
   Name: string;
   Title: string;
   Category?: string | null;
-  ImgURL: number | Media;
+  ImgURL: string | Media;
   ImgWidthSizeX?: number | null;
   ShortDetails?: string | null;
   LongDetails?: string | null;
@@ -174,25 +189,10 @@ export interface Service {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sections".
- */
-export interface Section {
-  id: number;
-  Name: string;
-  Title?: string | null;
-  ShortDetails: string;
-  LongDetails?: string | null;
-  ImgUrl?: (number | null) | Media;
-  ButtonText?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "jobOffers".
  */
 export interface JobOffer {
-  id: number;
+  id: string;
   Name: string;
   Title: string;
   Category: 'Security' | 'Events';
@@ -208,32 +208,32 @@ export interface JobOffer {
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: number;
+  id: string;
   document?:
     | ({
         relationTo: 'users';
-        value: number | User;
+        value: string | User;
       } | null)
     | ({
         relationTo: 'media';
-        value: number | Media;
-      } | null)
-    | ({
-        relationTo: 'services';
-        value: number | Service;
+        value: string | Media;
       } | null)
     | ({
         relationTo: 'sections';
-        value: number | Section;
+        value: string | Section;
+      } | null)
+    | ({
+        relationTo: 'services';
+        value: string | Service;
       } | null)
     | ({
         relationTo: 'jobOffers';
-        value: number | JobOffer;
+        value: string | JobOffer;
       } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -243,10 +243,10 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: number;
+  id: string;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   key?: string | null;
   value?:
@@ -266,7 +266,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: number;
+  id: string;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -307,6 +307,20 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sections_select".
+ */
+export interface SectionsSelect<T extends boolean = true> {
+  Name?: T;
+  Title?: T;
+  ShortDetails?: T;
+  LongDetails?: T;
+  ImgUrl?: T;
+  ButtonText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "services_select".
  */
 export interface ServicesSelect<T extends boolean = true> {
@@ -318,20 +332,6 @@ export interface ServicesSelect<T extends boolean = true> {
   ImgWidthSizeX?: T;
   ShortDetails?: T;
   LongDetails?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sections_select".
- */
-export interface SectionsSelect<T extends boolean = true> {
-  Name?: T;
-  Title?: T;
-  ShortDetails?: T;
-  LongDetails?: T;
-  ImgUrl?: T;
-  ButtonText?: T;
   updatedAt?: T;
   createdAt?: T;
 }
