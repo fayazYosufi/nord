@@ -25,6 +25,16 @@ export default buildConfig({
   },
   collections: [Users, Media, Sections, Services, JobOffers],
 
+  //  media: {
+  //   // Define your media settings
+  //   // upload: 'file',
+  //   // Adjust the endpoint if needed
+  //   upload: {
+  //     endpoint: '/api/media',
+  //     local: path.join(__dirname, 'path/to/uploads'), // Adjust the path if necessary
+  //   },
+  // },
+
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

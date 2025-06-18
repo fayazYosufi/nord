@@ -14,6 +14,7 @@ function Pursue() {
     <div>
       <PostFullPageWithBgPhoto
         postPhotoURL={purseSection?.ImgUrl}
+        // postPhotoURL={`${purseSection?.ImgUrl}`}
         postTitle={purseSection?.Title}
         postShortDetails={purseSection?.ShortDetails}
         buttonText=""
