@@ -8,6 +8,7 @@ export interface MyContextType {
   singlePostData: postPropsType
   loading: boolean
   error: string | null
+  apiURL: string
 }
 
 export interface SectionsType {

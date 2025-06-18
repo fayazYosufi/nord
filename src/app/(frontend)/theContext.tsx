@@ -117,6 +117,7 @@ export const MyProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         singlePostData,
         loading,
         error,
+        apiURL,
       }}
     >
       {children}
