@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useMyContext } from '../theContext'
+import path from 'path'
 
 const Contact = () => {
   const { apiURL } = useMyContext()
@@ -20,6 +21,11 @@ const Contact = () => {
 
       <img src={`${apiURL}/media/file/contact.PNG`} alt="img" />
       <img src={`${apiURL}/media/contact.PNG`} alt="img" />
+
+      <img src={path.join(__dirname, '../../media/contact.PNG')} alt="img" />
+      <img src={path.join(__dirname, '../media/contact.PNG')} alt="img" />
+      <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
+      <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" />
 
       <h1>Contacts</h1>
     </div>
