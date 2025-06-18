@@ -15,7 +15,7 @@ import { JobOffers } from './collections/JobsOffers'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
+// const myType = '{[key:string]: string}'
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -25,16 +25,12 @@ export default buildConfig({
   },
   collections: [Users, Media, Sections, Services, JobOffers],
 
-  //  media: {
-  //   // Define your media settings
-  //   // upload: 'file',
-  //   // Adjust the endpoint if needed
-  //   upload: {
-  //     endpoint: '/api/media',
-  //     local: path.join(__dirname, 'path/to/uploads'), // Adjust the path if necessary
-  //   },
-  // },
-
+  media: {
+    // This is where your media will be stored
+    upload: 'file', // or 'cloudinary', depending on your setup
+    // local: './media', // Adjust this path as needed
+    local: path.join(__dirname, '../media'),
+  },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
