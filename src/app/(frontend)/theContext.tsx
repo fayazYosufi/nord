@@ -57,7 +57,8 @@ export const MyProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 
-  const apiURL = 'http://localhost:3000/api'
+  // const apiURL = 'http://localhost:3000/api'
+  const apiURL = 'https://nord-bay.vercel.app/api'
   useEffect(() => {
     const fetchData = async () => {
       try {
