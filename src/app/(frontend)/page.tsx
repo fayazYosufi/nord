@@ -233,7 +233,6 @@ const Home = () => {
       <ChatIcont />
 
       <PostFullPageWithBgPhoto
-        // postPhotoURL="/api/media/file/homeNew.PNG"
         postPhotoURL={homeSection?.ImgUrl}
         postTitle={homeSection?.Title}
         postShortDetails={homeSection?.ShortDetails}
