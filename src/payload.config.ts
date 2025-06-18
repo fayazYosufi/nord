@@ -28,8 +28,8 @@ export default buildConfig({
   media: {
     // This is where your media will be stored
     upload: 'file', // or 'cloudinary', depending on your setup
-    // local: './media', // Adjust this path as needed
     local: path.join(__dirname, '../media'),
+    // local: './media', // Adjust this path as needed
   },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
