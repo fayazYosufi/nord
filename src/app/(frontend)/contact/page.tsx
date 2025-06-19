@@ -6,7 +6,7 @@ import path from 'path'
 
 const Contact = () => {
   const { sections } = useMyContext()
-  console.log(sections[0].ImgUrl?.url)
+  console.log(sections[0]?.ImgUrl?.url)
   const apiURL = 'https://nord-bay.vercel.app/api'
   // const apiURL = 'https://nord-bay.vercel.app/api'
 
