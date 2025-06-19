@@ -5,8 +5,10 @@ import { useMyContext } from '../theContext'
 import path from 'path'
 
 const Contact = () => {
-  const { apiURL, sections } = useMyContext()
-  console.log(sections)
+  const { sections } = useMyContext()
+  console.log(sections[0].ImgUrl?.url)
+  const apiURL = 'https://nord-bay.vercel.app/api'
+  // const apiURL = 'https://nord-bay.vercel.app/api'
 
   return (
     <div className="page">
@@ -29,10 +31,13 @@ const Contact = () => {
       <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" /> */}
 
-      {/* {sections?.map((imgUrl:{[key:string]: string}, i) => (
-      <img key={i} src={imgUrl} />
-
-      )} */}
+      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl.ImgUrl?.url} />)}
+      {sections?.map((imgUrl, i) => (
+        <img key={i} src={`${apiURL.replace('/api', '')}/${imgUrl.ImgUrl?.url}`} />
+      ))}
+      {sections?.map((imgUrl, i) => (
+        <img key={i} src={apiURL.replace('/api', '') + imgUrl.ImgUrl?.url} />
+      ))}
 
       <h1>Contacts</h1>
     </div>
