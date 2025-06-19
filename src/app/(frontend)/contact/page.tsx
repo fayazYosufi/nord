@@ -28,8 +28,9 @@ const Contact = () => {
 
       <img src={path.join(__dirname, '../../media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '../media/contact.PNG')} alt="img" />
-      <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" /> */}
+
+      <img src='https://seo-nord.vercel.app/images/homeNew.PNG' alt="img" />
 
       {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
       {sections?.map((imgUrl, i) => (

@@ -18,6 +18,8 @@
     "@payloadcms/db-mongodb": "3.43.0",
     "@payloadcms/next": "3.43.0",
     "@payloadcms/payload-cloud": "3.43.0",
+    "@payloadcms/plugin-cloud-storage": "^1.0.0",
+    "@aws-sdk/client-s3": "^3.540.0",
     "@payloadcms/richtext-lexical": "3.43.0",
     "@payloadcms/ui": "3.43.0",
     "axios": "^1.10.0",
