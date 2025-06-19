@@ -24,14 +24,12 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  upload: {
+    useTempFiles: true,
+    tempFileDir: '/tmp/payload-uploads',
+  },
   collections: [Users, Media, Sections, Services, JobOffers],
 
-  // media: {
-  //   // This is where your media will be stored
-  //   upload: 'file', // or 'cloudinary', depending on your setup
-  //   local: path.join(__dirname, '../media'),
-  //   // local: './media', // Adjust this path as needed
-  // },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
