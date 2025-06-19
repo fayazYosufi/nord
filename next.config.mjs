@@ -6,6 +6,7 @@ const nextConfig = {
     domains: [
       'localhost',
       'localhost:3000',
+      'https://nord-bay.vercel.app',
       'https://nord-bay.vercel.app/',
       'your-bucket.s3.amazonaws.com',
     ], // if using S3], // Replace with your actual domain

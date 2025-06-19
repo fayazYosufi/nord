@@ -31,12 +31,12 @@ const Contact = () => {
       <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" /> */}
 
-      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl.ImgUrl?.url} />)}
+      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
       {sections?.map((imgUrl, i) => (
-        <img key={i} src={`${apiURL.replace('/api', '')}/${imgUrl.ImgUrl?.url}`} />
+        <img key={i} src={`${apiURL.replace('/api', '')}/${imgUrl?.ImgUrl?.url}`} />
       ))}
       {sections?.map((imgUrl, i) => (
-        <img key={i} src={apiURL.replace('/api', '') + imgUrl.ImgUrl?.url} />
+        <img key={i} src={apiURL.replace('/api', '') + imgUrl?.ImgUrl?.url} />
       ))}
 
       <h1>Contacts</h1>
