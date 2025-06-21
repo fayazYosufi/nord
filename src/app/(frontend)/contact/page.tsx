@@ -18,7 +18,7 @@ const Contact = () => {
 
       <div className="dFlex">
         {sections?.map((imgUrl, i) => (
-          <img key={i} src={`${imgUrl?.ImgUrl?.url?.replace('/api', '/')}`} alt="222" />
+          <img key={i} src={`/${imgUrl?.ImgUrl?.url?.replace('/api/media/file/', '')}`} alt="222" />
         ))}
       </div>
 
@@ -26,7 +26,7 @@ const Contact = () => {
         {sections?.map((imgUrl, i) => (
           <img
             key={i}
-            src={`${imgUrl?.ImgUrl?.url?.replace('/api/media/file/', '/media/')}`}
+            src={`/${imgUrl?.ImgUrl?.url?.replace('/api/media/file/', 'media/')}`}
             alt="333"
           />
         ))}
