@@ -5,10 +5,10 @@ export const Media: CollectionConfig = {
   access: {
     read: () => true,
   },
-  upload: {
-    staticDir: 'public/media',
-    // staticDir: 'public',
-  },
+  // upload: {
+  //   staticDir: 'media',
+  // },
+  upload: true,
   // mimeTypes: ['image/*'],
   fields: [
     {
