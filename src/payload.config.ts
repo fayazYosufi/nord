@@ -13,6 +13,7 @@ import { Media } from './collections/Media'
 import { Sections } from './collections/Sections'
 import { Services } from './collections/Services'
 import { JobOffers } from './collections/JobsOffers'
+import { Madia } from './collections/Madia'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -28,7 +29,7 @@ export default buildConfig({
     useTempFiles: true,
     tempFileDir: '/tmp/payload-uploads',
   },
-  collections: [Users, Media, Sections, Services, JobOffers],
+  collections: [Madia, Users, Media, Sections, Services, JobOffers],
 
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
