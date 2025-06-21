@@ -22,7 +22,8 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     importMap: {
-      baseDir: path.resolve(dirname),
+      // baseDir: path.resolve(dirname),
+      baseDir: path.resolve(__dirname),
     },
   },
   upload: {
@@ -31,10 +32,17 @@ export default buildConfig({
   },
   collections: [Madia, Users, Media, Sections, Services, JobOffers],
 
+  // media: {
+  //   upload: 'local',
+  //   local: {
+  //     uploads: path.resolve(__dirname, 'public/media'), // Ensure this path is correct
+  //   },
+  // },
+
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
+    outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',

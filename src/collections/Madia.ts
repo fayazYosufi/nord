@@ -5,14 +5,13 @@ export const Madia: CollectionConfig = {
   access: {
     read: () => true,
   },
-  // staticDir: 'media',
-  // mimeTypes: ['image/*'],
   fields: [
     {
       name: 'alt',
       type: 'text',
       required: true,
     },
+    // You can add more fields if necessary
   ],
-  upload: true,
+  upload: true, // This enables media uploads
 }
