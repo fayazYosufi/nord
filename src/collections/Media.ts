@@ -6,8 +6,8 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
-    // staticDir: 'public/media',
-    staticDir: 'public',
+    staticDir: 'public/media',
+    // staticDir: 'public',
   },
   // mimeTypes: ['image/*'],
   fields: [
