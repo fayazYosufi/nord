@@ -5,7 +5,9 @@ export const Media: CollectionConfig = {
   access: {
     read: () => true,
   },
-  // staticDir: 'media',
+  upload: {
+    staticDir: 'public/media',
+  },
   // mimeTypes: ['image/*'],
   fields: [
     {
@@ -14,5 +16,4 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
 }

@@ -2,27 +2,25 @@
 
 import React from 'react'
 import { useMyContext } from '../theContext'
-// import path from 'path'
 
 const Contact = () => {
   const { sections } = useMyContext()
-  // console.log(sections[0]?.ImgUrl?.url)
-  // const apiURL = 'https://localhost:3000'
-  // const apiURL = 'https://nord-bay.vercel.app/api'
 
   return (
-    <div className="page">
+    <div className="page dFlex ">
       {/* {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} alt="000" />)} */}
 
+      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} alt="111" />)}
+
       {sections?.map((imgUrl, i) => (
-        <img key={i} src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/')}`} alt="111" />
+        <img key={i} src={`${imgUrl?.ImgUrl?.url.replace('/api', '/')}`} alt="222" />
       ))}
 
       {sections?.map((imgUrl, i) => (
         <img
           key={i}
           src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/media/')}`}
-          alt="222"
+          alt="333"
         />
       ))}
 
@@ -30,7 +28,7 @@ const Contact = () => {
         <img
           key={i}
           src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/../media/')}`}
-          alt="333"
+          alt="444"
         />
       ))}
 
