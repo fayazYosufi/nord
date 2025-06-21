@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
 import { Users } from './collections/Users'
-import { Media } from './collections/Media'
+// import { Media } from './collections/Media'
 import { Sections } from './collections/Sections'
 import { Services } from './collections/Services'
 import { JobOffers } from './collections/JobsOffers'
@@ -28,7 +28,7 @@ export default buildConfig({
     useTempFiles: true,
     tempFileDir: '/tmp/payload-uploads',
   },
-  collections: [Users, Media, Sections, Services, JobOffers],
+  collections: [Users, Sections, Services, JobOffers],
 
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
