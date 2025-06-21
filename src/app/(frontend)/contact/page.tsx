@@ -7,7 +7,7 @@ import path from 'path'
 const Contact = () => {
   const { sections } = useMyContext()
   console.log(sections[0]?.ImgUrl?.url)
-  const apiURL = 'https://nord-bay.vercel.app/api'
+  const apiURL = 'https://localhost:3000'
   // const apiURL = 'https://nord-bay.vercel.app/api'
 
   return (
@@ -28,17 +28,16 @@ const Contact = () => {
 
       <img src={path.join(__dirname, '../../media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '../media/contact.PNG')} alt="img" />
+      <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" /> */}
 
-      <img src='https://seo-nord.vercel.app/images/homeNew.PNG' alt="img" />
-
-      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
+      {/* {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
       {sections?.map((imgUrl, i) => (
         <img key={i} src={`${apiURL.replace('/api', '')}/${imgUrl?.ImgUrl?.url}`} />
       ))}
       {sections?.map((imgUrl, i) => (
         <img key={i} src={apiURL.replace('/api', '') + imgUrl?.ImgUrl?.url} />
-      ))}
+      ))} */}
 
       <h1>Contacts</h1>
     </div>
