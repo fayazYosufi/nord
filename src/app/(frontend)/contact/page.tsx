@@ -14,14 +14,22 @@ const Contact = () => {
     <div className="page">
       {/* {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} alt="000" />)} */}
 
-      {/* {sections?.map((imgUrl, i) => (
-        <img key={i} src={`/${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '')}`} alt="111" />
-      ))} */}
+      {sections?.map((imgUrl, i) => (
+        <img key={i} src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/')}`} alt="111" />
+      ))}
 
       {sections?.map((imgUrl, i) => (
         <img
           key={i}
           src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/media/')}`}
+          alt="111"
+        />
+      ))}
+
+      {sections?.map((imgUrl, i) => (
+        <img
+          key={i}
+          src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/../media/')}`}
           alt="111"
         />
       ))}
