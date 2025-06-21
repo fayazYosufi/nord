@@ -6,7 +6,7 @@ import { useMyContext } from '../theContext'
 
 const Contact = () => {
   const { sections } = useMyContext()
-  console.log(sections[0]?.ImgUrl?.url)
+  // console.log(sections[0]?.ImgUrl?.url)
   // const apiURL = 'https://localhost:3000'
   // const apiURL = 'https://nord-bay.vercel.app/api'
 
@@ -22,7 +22,7 @@ const Contact = () => {
         <img
           key={i}
           src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/media/')}`}
-          alt="111"
+          alt="222"
         />
       ))}
 
@@ -30,7 +30,7 @@ const Contact = () => {
         <img
           key={i}
           src={`${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '/../media/')}`}
-          alt="111"
+          alt="333"
         />
       ))}
 
