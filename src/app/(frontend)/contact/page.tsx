@@ -12,8 +12,8 @@ const Contact = () => {
 
   return (
     <div className="page">
+      {/* // <img src="./media/contact.PNG" alt="img" /> */}
       {/* <img src="/media/contact.PNG" alt="img" />
-      <img src="./media/contact.PNG" alt="img" />
       <img src="../media/contact.PNG" alt="img" />
       <img src="../../media/contact.PNG" alt="img" />
       <img src="../../../media/contact.PNG" alt="img" />
@@ -31,13 +31,13 @@ const Contact = () => {
       <img src={path.join(__dirname, './media/contact.PNG')} alt="img" />
       <img src={path.join(__dirname, '/media/contact.PNG')} alt="img" /> */}
 
-      {/* {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
+      {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} />)}
+
       {sections?.map((imgUrl, i) => (
-        <img key={i} src={`${apiURL.replace('/api', '')}/${imgUrl?.ImgUrl?.url}`} />
+        <img key={i} src={`/${imgUrl?.ImgUrl?.url.replace('/api/media/file/', '')}`} />
       ))}
-      {sections?.map((imgUrl, i) => (
-        <img key={i} src={apiURL.replace('/api', '') + imgUrl?.ImgUrl?.url} />
-      ))} */}
+
+      {sections?.map((imgUrl, i) => <img key={i} src={`/${imgUrl?.ImgUrl?.url.split('/')[3]}`} />)}
 
       <h1>Contacts</h1>
     </div>
