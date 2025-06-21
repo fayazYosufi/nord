@@ -14,7 +14,6 @@ import { Sections } from './collections/Sections'
 import { Services } from './collections/Services'
 import { JobOffers } from './collections/JobsOffers'
 
-
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 // const myType = '{[key:string]: string}'
