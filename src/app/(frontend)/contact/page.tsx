@@ -8,7 +8,9 @@ const Contact = () => {
 
   return (
     <div className="page  ">
-      {/* {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} alt="000" />)} */}
+      <div>
+        <img src="/media/homeNew.PNG" />
+      </div>
 
       <div className="dFlex">
         {sections?.map((imgUrl, i) => <img key={i} src={imgUrl?.ImgUrl?.url} alt="111" />)}
